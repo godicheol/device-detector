@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>device-inspector</title>
+</head>
+
+<body>
+    <h1>device-inspector</h1>
+
+    <div style="margin: 1rem 0; border-bottom: 1px solid;"></div>
+
+    <strong>Desktop:</strong>
+    <span id="result-1"></span>
+    <br />
+    <strong>Tablet:</strong>
+    <span id="result-2"></span>
+    <br />
+    <strong>Mobile:</strong>
+    <span id="result-3"></span>
+    <br />
+    <strong>Browser:</strong>
+    <span id="result-4"></span>
+    <br />
+    <strong>Browser version:</strong>
+    <span id="result-5"></span>
+    <br />
+    <strong>OS:</strong>
+    <span id="result-6"></span>
+    <br />
+    <strong>OS version:</strong>
+    <span id="result-7"></span>
+    <br />
+    <strong>Total information:</strong>
+    <span id="result-10"></span>
+
+    <script src="dist/device-inspector.js"></script>
+    <script>
+        (function() {
+            document.getElementById("result-1").innerHTML = deviceInspector.isDesktop();
+            document.getElementById("result-2").innerHTML = deviceInspector.isTablet();
+            document.getElementById("result-3").innerHTML = deviceInspector.isMobile();
+            document.getElementById("result-4").innerHTML = deviceInspector.getBrowser();
+            document.getElementById("result-5").innerHTML = deviceInspector.getBrowserVersion();
+            document.getElementById("result-6").innerHTML = deviceInspector.getOS();
+            // document.getElementById("result-7").innerHTML = deviceInspector.getOSVersion();
+            document.getElementById("result-10").innerHTML = deviceInspector.getTotal();
+        })();
+    </script>
+</body>
+
+</html>

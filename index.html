@@ -33,6 +33,12 @@
     <strong>OS version:</strong>
     <span id="result-7"></span>
     <br />
+    <strong>Browser screen:</strong>
+    <span id="result-8"></span>
+    <br />
+    <strong>Device screen:</strong>
+    <span id="result-9"></span>
+    <br />
     <strong>Total information:</strong>
     <span id="result-10"></span>
 
@@ -46,6 +52,8 @@
             document.getElementById("result-5").innerHTML = deviceDetector.getBrowserVersion();
             document.getElementById("result-6").innerHTML = deviceDetector.getOS();
             // document.getElementById("result-7").innerHTML = deviceDetector.getOSVersion();
+            document.getElementById("result-8").innerHTML = JSON.stringify(deviceDetector.getBrowserScreen());
+            document.getElementById("result-9").innerHTML = JSON.stringify(deviceDetector.getDeviceScreen());
             document.getElementById("result-10").innerHTML = deviceDetector.getTotal();
         })();
     </script>

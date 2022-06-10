@@ -47,6 +47,25 @@
 
     }
 
+    exports.getBrowserScreen = function() {
+        var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName("body")[0].clientWidth;
+        var y = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName("body")[0].clientHeight;
+        return {
+            x: x,
+            y: y
+        }
+    }
+
+    exports.getDeviceScreen = function() {
+        var x = window.screen.width;
+        var y = window.screen.height;
+        var res = window.devicePixelRatio;
+        return {
+            x: x * res,
+            y: y * res
+        }
+    }
+
     exports.getBrowser = function() {
         var browserAlias = {
             "Opera": "Opera",

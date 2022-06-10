@@ -3,15 +3,6 @@
 
     var exports = {};
 
-    exports.getScreenSize = function() {
-        var screenSize = '';
-        if (screen.width) {
-            width = (screen.width) ? screen.width : '';
-            height = (screen.height) ? screen.height : '';
-            screenSize += '' + width + " x " + height;
-        }
-    }
-
     exports.getOS = function() {
         var i;
         var clients = [
@@ -128,7 +119,7 @@
         return navigator.userAgent;
     }
 
-    if (typeof(window.deviceInspector) === "undefined") {
-        window.deviceInspector = exports;
+    if (typeof(window.deviceDetector) === "undefined") {
+        window.deviceDetector = exports;
     }
 })();

@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>device-inspector</title>
+    <title>device-detector</title>
 </head>
 
 <body>
-    <h1>device-inspector</h1>
+    <h1>device-detector</h1>
 
     <div style="margin: 1rem 0; border-bottom: 1px solid;"></div>
 
@@ -36,17 +36,17 @@
     <strong>Total information:</strong>
     <span id="result-10"></span>
 
-    <script src="dist/device-inspector.js"></script>
+    <script src="dist/device-detector.js"></script>
     <script>
         (function() {
-            document.getElementById("result-1").innerHTML = deviceInspector.isDesktop();
-            document.getElementById("result-2").innerHTML = deviceInspector.isTablet();
-            document.getElementById("result-3").innerHTML = deviceInspector.isMobile();
-            document.getElementById("result-4").innerHTML = deviceInspector.getBrowser();
-            document.getElementById("result-5").innerHTML = deviceInspector.getBrowserVersion();
-            document.getElementById("result-6").innerHTML = deviceInspector.getOS();
-            // document.getElementById("result-7").innerHTML = deviceInspector.getOSVersion();
-            document.getElementById("result-10").innerHTML = deviceInspector.getTotal();
+            document.getElementById("result-1").innerHTML = deviceDetector.isDesktop();
+            document.getElementById("result-2").innerHTML = deviceDetector.isTablet();
+            document.getElementById("result-3").innerHTML = deviceDetector.isMobile();
+            document.getElementById("result-4").innerHTML = deviceDetector.getBrowser();
+            document.getElementById("result-5").innerHTML = deviceDetector.getBrowserVersion();
+            document.getElementById("result-6").innerHTML = deviceDetector.getOS();
+            // document.getElementById("result-7").innerHTML = deviceDetector.getOSVersion();
+            document.getElementById("result-10").innerHTML = deviceDetector.getTotal();
         })();
     </script>
 </body>
